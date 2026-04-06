@@ -60,10 +60,12 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end space-x-3">
-        <a className="btn bg-green-500 hover:bg-green-700 text-white">
+        <a className="btn bg-green-500 hover:bg-green-600 text-white">
           Sign In
         </a>
-        <a className="btn bg-sky-400 hover:bg-sky-500 text-white">Sign Up</a>
+        <a className="btn bg-[#59C6D2] hover:bg-[#35a1ad] text-white">
+          Sign Up
+        </a>
       </div>
     </div>
   );
