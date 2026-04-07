@@ -9,8 +9,6 @@ import { useState } from "react";
 const Books = () => {
   const [sortingType, setSortingType] = useState("");
 
-  console.log(sortingType, "sortingType");
-
   return (
     <div className="container mx-auto mb-6">
       <h2 className="text-center font-bold text-3xl p-8 bg-base-300 rounded-2xl">
