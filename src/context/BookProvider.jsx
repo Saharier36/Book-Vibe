@@ -6,11 +6,11 @@ import { toast } from "react-toastify";
 export const BookContext = createContext();
 
 const BookProvider = ({ children }) => {
-  const [storedBooks, setStoredBooks] = useState([]);
+  const [readList, setReadList] = useState([]);
   const [wishList, setWishList] = useState([]);
 
   const handleMarkAsRead = (currentBook) => {
-    const isExistBook = storedBooks.find(
+    const isExistBook = readList.find(
       (book) => book.bookId === currentBook.bookId,
     );
     if (isExistBook) {
@@ -18,7 +18,7 @@ const BookProvider = ({ children }) => {
       return;
     }
 
-    setStoredBooks([...storedBooks, currentBook]);
+    setReadList([...readList, currentBook]);
 
     const isExistInWishList = wishList.find(
       (book) => book.bookId === currentBook.bookId,
@@ -27,7 +27,7 @@ const BookProvider = ({ children }) => {
       setWishList(
         wishList.filter((book) => book.bookId !== currentBook.bookId),
       );
-      toast.success(
+      toast.info(
         `${currentBook.bookName} moved from wishlist to read list!`,
       );
     } else {
@@ -36,11 +36,11 @@ const BookProvider = ({ children }) => {
   };
 
   const handleWishList = (currentBook) => {
-    const isExistInReadList = storedBooks.find(
+    const isExistInReadList = readList.find(
       (book) => book.bookId === currentBook.bookId,
     );
     if (isExistInReadList) {
-      toast.info("Already in read list. Can't add to wishlist!");
+      toast.warning("Already in read list. Can't add to wishlist!");
       return;
     }
 
@@ -57,8 +57,8 @@ const BookProvider = ({ children }) => {
   };
 
   const data = {
-    storedBooks,
-    setStoredBooks,
+    readList,
+    setReadList,
     handleMarkAsRead,
     wishList,
     setWishList,
