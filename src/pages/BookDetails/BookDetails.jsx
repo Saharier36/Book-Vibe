@@ -1,6 +1,8 @@
 import React from "react";
+import { useContext } from "react";
 import { use } from "react";
 import { useParams } from "react-router";
+import { BookContext } from "../../context/BookProvider";
 
 const booksPromise = fetch("/booksData.json").then((res) => res.json());
 
@@ -9,9 +11,10 @@ const BookDetails = () => {
 
   const books = use(booksPromise);
 
-  const expectBook = books.find((book) => book.bookId === Number(id));
+  const expectedBook = books.find((book) => book.bookId === Number(id));
 
   const {
+    bookId,
     bookName,
     author,
     image,
@@ -22,7 +25,13 @@ const BookDetails = () => {
     tags,
     publisher,
     yearOfPublishing,
-  } = expectBook;
+  } = expectedBook;
+
+
+  const { handleMarkAsRead, storedBooks } = useContext(BookContext);
+
+
+  
 
   return (
     <div className="card lg:card-side bg-base-100 container mx-auto mb-6">
@@ -82,11 +91,14 @@ const BookDetails = () => {
         </div>
 
         <div className="flex items-center gap-3 pt-1">
-          <button className="btn btn-outline border-base-content/20">
-            Read
+          <button
+            onClick={() => handleMarkAsRead(expectedBook)}
+            className="btn btn-outline border-base-content/20"
+          >
+            Mark as Read
           </button>
           <button className="btn bg-[#50C0C0] hover:bg-[#3aadad] text-white">
-            Wishlist
+            Add to Wishlist
           </button>
         </div>
       </div>
