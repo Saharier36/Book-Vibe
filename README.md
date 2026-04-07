@@ -1,16 +1,67 @@
-# React + Vite
+# 📚 Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Book Vibe is a simple and interactive React-based web application where users can explore books, view details, and track reading progress visually.
 
-Currently, two official plugins are available:
+This project was built as a practice project to strengthen skills in React, routing, UI design, and data handling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 **Live Site:** [book-vibe-bookshelf.vercel.app](https://book-vibe-bookshelf.vercel.app)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 📖 Browse a curated collection of books with full details
+- ✅ Mark books as **Read** — saved in local storage
+- 💚 Add books to your **Wishlist** — saved in local storage
+- 🔄 Moving a book from wishlist to read list removes it from wishlist automatically
+- 🔃 Sort listed books by **Rating**, **Number of Pages**, or **Year of Publishing**
+- 📋 Separate tabs for Read List and Wishlist
+- ⭐ Book rating display
+- 🏷️ Category and tag system
+- 📊 Pages-to-read chart visualization (Recharts)
+- 🌗 Light & Dark theme toggle (daisyUI)
+- 🔔 Toast notifications for all user actions
+- 📱 Fully responsive design
+- 🎨 Clean and modern UI with Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
+![Lucide](https://img.shields.io/badge/Lucide_React-F56565?style=for-the-badge&logo=lucide&logoColor=white)
+![React Tabs](https://img.shields.io/badge/React_Tabs-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![React Toastify](https://img.shields.io/badge/React_Toastify-FFBE00?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+---
+
+## 📌 Purpose
+
+This project is built for learning and practicing:
+
+- React fundamentals
+- Component structure & reusability
+- Context API for state management
+- Routing with React Router
+- Local storage integration
+- UI/UX design
+- Data visualization with Recharts
+
+---
+
+## 👨‍💻 Author
+
+**Saharier Omi**
+- GitHub: [@Saharier36](https://github.com/Saharier36)
+- LinkedIn: [saharier-omi](https://linkedin.com/in/saharier-omi)
+
+---
+
+## 📃 License
+
+This project is for educational purposes only.
