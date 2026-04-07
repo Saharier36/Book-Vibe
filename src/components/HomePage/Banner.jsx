@@ -1,5 +1,6 @@
 import React from "react";
 import bannerImg from "../../assets/banner.png";
+import { Link } from "react-router";
 
 const Banner = () => {
   return (
@@ -12,9 +13,12 @@ const Banner = () => {
               Books to freshen up <br /> your bookshelf
             </h1>
 
-            <button className="btn bg-green-500 hover:bg-green-600 text-white">
+            <Link
+              to={"/books"}
+              className="btn bg-green-500 hover:bg-green-600 text-white"
+            >
               View The List
-            </button>
+            </Link>
           </div>
         </div>
       </div>

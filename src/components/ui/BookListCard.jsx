@@ -18,7 +18,7 @@ const BookListCard = ({ book }) => {
 
   return (
     <div>
-      <div className="card md:card-side bg-base-100 shadow-sm border border-base-200 mb-4 p-4">
+      <div className="card md:card-side bg-base-100 shadow-sm border border-base-200 my-6 p-4">
         <figure className="md:w-32 w-full bg-base-300 p-6 rounded-xl shrink-0">
           <img
             src={image}

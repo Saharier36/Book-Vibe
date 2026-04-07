@@ -60,12 +60,24 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end space-x-3">
-        <a className="btn bg-green-500 hover:bg-green-600 text-white">
+        <input
+          type="checkbox"
+          className="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:var(--color-sky-500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:var(--color-blue-900)]"
+          value="dark"
+        />
+
+        <Link
+          to={"/sign-in"}
+          className="btn bg-green-500 hover:bg-green-600 text-white"
+        >
           Sign In
-        </a>
-        <a className="btn bg-[#59C6D2] hover:bg-[#35a1ad] text-white">
+        </Link>
+        <Link
+          to={"/sign-up"}
+          className="btn bg-[#59C6D2] hover:bg-[#35a1ad] text-white"
+        >
           Sign Up
-        </a>
+        </Link>
       </div>
     </div>
   );
