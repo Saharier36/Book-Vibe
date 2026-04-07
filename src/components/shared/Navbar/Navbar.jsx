@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, User, UserPlus } from "lucide-react";
 import React from "react";
 import { Link, NavLink } from "react-router";
 
@@ -70,13 +70,19 @@ const Navbar = () => {
           to={"/sign-in"}
           className="btn bg-green-500 hover:bg-green-600 text-white"
         >
-          Sign In
+          <span className="lg:hidden">
+            <User size={16} />
+          </span>
+          <span className="hidden lg:inline">Sign In</span>
         </Link>
         <Link
           to={"/sign-up"}
           className="btn bg-[#59C6D2] hover:bg-[#35a1ad] text-white"
         >
-          Sign Up
+          <span className="lg:hidden">
+            <UserPlus size={16} />
+          </span>
+          <span className="hidden lg:inline">Sign Up</span>
         </Link>
       </div>
     </div>
