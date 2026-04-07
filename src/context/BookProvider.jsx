@@ -1,15 +1,22 @@
-import React from "react";
 import { createContext } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import {
+  addReadListToLocalDB,
+  getAllReadListFormLocalDB,
+  addWishListToLocalDB,
+  getAllWishListFormLocalDB,
+  removeWishListFromLocalDB,
+} from "../utils/localDB";
 
 export const BookContext = createContext();
 
 const BookProvider = ({ children }) => {
-  const [readList, setReadList] = useState([]);
-  const [wishList, setWishList] = useState([]);
+  const [readList, setReadList] = useState(() => getAllReadListFormLocalDB());
+  const [wishList, setWishList] = useState(() => getAllWishListFormLocalDB());
 
   const handleMarkAsRead = (currentBook) => {
+    addReadListToLocalDB(currentBook);
     const isExistBook = readList.find(
       (book) => book.bookId === currentBook.bookId,
     );
@@ -24,6 +31,7 @@ const BookProvider = ({ children }) => {
       (book) => book.bookId === currentBook.bookId,
     );
     if (isExistInWishList) {
+      removeWishListFromLocalDB(currentBook.bookId);
       setWishList(
         wishList.filter((book) => book.bookId !== currentBook.bookId),
       );
@@ -49,7 +57,7 @@ const BookProvider = ({ children }) => {
       toast.warning("Already in your wishlist!");
       return;
     }
-
+    addWishListToLocalDB(currentBook);
     setWishList([...wishList, currentBook]);
     toast.success(`${currentBook.bookName} added to wishlist!`);
   };

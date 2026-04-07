@@ -18,7 +18,7 @@ const BookCard = ({ book }) => {
           {tags.map((tag, ind) => (
             <div
               key={ind}
-              className="badge rounded-full bg-base-200 text-[#23BE0A] font-medium"
+              className="badge rounded-full bg-success/10 text-[#23BE0A] font-medium"
             >
               {tag}
             </div>

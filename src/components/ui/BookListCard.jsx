@@ -38,7 +38,7 @@ const BookListCard = ({ book }) => {
             {tags.map((tag, ind) => (
               <span
                 key={ind}
-                className="badge rounded-full bg-green-50 text-green-500 font-medium border-0 px-3 py-2 text-xs"
+                className="badge rounded-full bg-success/10 text-green-500 font-medium border-0 px-3 py-2 text-xs"
               >
                 #{tag}
               </span>
@@ -63,10 +63,10 @@ const BookListCard = ({ book }) => {
           <hr className="border-t border-base-300 my-1" />
 
           <div className="flex items-center gap-3">
-            <span className="badge rounded-full bg-blue-50 text-blue-400 border-0 px-4 py-3 text-xs font-medium">
+            <span className="badge rounded-full bg-info/10 text-blue-400 border-0 px-4 py-3 text-xs font-medium">
               Category: {category}
             </span>
-            <span className="badge rounded-full bg-orange-50 text-orange-400 border-0 px-4 py-3 text-xs font-medium">
+            <span className="badge rounded-full bg-warning/10 text-orange-400 border-0 px-4 py-3 text-xs font-medium">
               Rating: {rating}
             </span>
             <Link
