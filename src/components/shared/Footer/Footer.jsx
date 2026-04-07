@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer justify-between sm:footer-horizontal bg-[#F3F3F3] p-6 container mx-auto">
+      <footer className="footer justify-between sm:footer-horizontal bg-base-300 p-6 container mx-auto">
         <aside>
           <Link to={"/"} className="text-2xl font-bold">
             Book Vibe
