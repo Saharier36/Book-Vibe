@@ -14,7 +14,6 @@ const BookDetails = () => {
   const expectedBook = books.find((book) => book.bookId === Number(id));
 
   const {
-    bookId,
     bookName,
     author,
     image,
@@ -28,7 +27,7 @@ const BookDetails = () => {
   } = expectedBook;
 
 
-  const { handleMarkAsRead, storedBooks } = useContext(BookContext);
+  const { handleMarkAsRead, handleWishList } = useContext(BookContext);
 
 
   
@@ -97,7 +96,10 @@ const BookDetails = () => {
           >
             Mark as Read
           </button>
-          <button className="btn bg-[#50C0C0] hover:bg-[#3aadad] text-white">
+          <button
+            onClick={() => handleWishList(expectedBook)}
+            className="btn bg-[#50C0C0] hover:bg-[#3aadad] text-white"
+          >
             Add to Wishlist
           </button>
         </div>
