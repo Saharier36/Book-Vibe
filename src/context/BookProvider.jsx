@@ -27,9 +27,7 @@ const BookProvider = ({ children }) => {
       setWishList(
         wishList.filter((book) => book.bookId !== currentBook.bookId),
       );
-      toast.info(
-        `${currentBook.bookName} moved from wishlist to read list!`,
-      );
+      toast.info(`${currentBook.bookName} moved from wishlist to read list!`);
     } else {
       toast.success(`${currentBook.bookName} added to read list!`);
     }
